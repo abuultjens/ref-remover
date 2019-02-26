@@ -14,4 +14,8 @@ This program removes a specific entry (eg. 'Reference') from a fasta file and ou
 ![alt text](https://github.com/abuultjens/ref-remover/blob/master/no_ref_core-snps.png)
 
 # Example 2: Removing the reference and extracting core and accessory snps
-![alt text](https://github.com/abuultjens/ref-remover/blob/master/core_and_accessory_snps_without_ref.png)
+
+```
+# run ref-remover
+sh ref-remover.sh test_ref.fa Reference test_wo-ref core_and_accessory_snps_without_ref
+```
