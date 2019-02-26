@@ -63,10 +63,12 @@ inspect table output
 ```
 #CHROM	POS	TAXA_A	TAXA_B	TAXA_C
 1	2	T	G	G
-```
+```  
 **ref-remover kept:**  
+
 * Site 2 = core position with snp   
 **ref-remover removed:**  
+
 * Site 1 = core position with snp (but not a snp when excluding the reference)   
 * Site 3 = accessory position with snp  
 * Site 4 = accessory position with no snp   
@@ -92,11 +94,13 @@ cat test_wo-ref.tab
 #CHROM	POS	TAXA_A	TAXA_B	TAXA_C
 1	2	T	G	G
 1	3	T	A	N
-```
-**ref-remover kept:**
+```   
+**ref-remover kept:**   
+
 * Site 2 = core position with snp   
 * Site 3 = accessory position with snp 
-**ref-remover removed:**
+**ref-remover removed:**   
+
 * Site 1 = core position with snp (but not a snp when excluding the reference)   
 * Site 4 = accessory position with no snp  
 
