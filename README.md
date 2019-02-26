@@ -4,8 +4,9 @@ This program is a multi-option tool that removes a specific entry (eg. 'Referenc
 # Author
 Andrew Buultjens
 
+# Examples
 
-# Original alignment containing reference sequence
+**Original alignment containing reference sequence:**   
 ```
 cat test_ref.fa
 >Reference
