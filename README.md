@@ -16,10 +16,10 @@ AGAA
 >TAXA_C
 AGNN
 ```
-the alignment contains:
-Site 1 = core position with snp (but not a snp when excluding the reference)
-Site 2 = core position with snp
-Site 3 = accessory position with snp
+the alignment contains:   
+Site 1 = core position with snp (but not a snp when excluding the reference)   
+Site 2 = core position with snp  
+Site 3 = accessory position with snp  
 Site 4 = accessory position with no snp
 
 # Example 1: Removing the reference but keeping all original sites
