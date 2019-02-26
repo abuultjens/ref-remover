@@ -95,7 +95,7 @@ cat test_wo-ref.tab
 ```   
 **ref-remover kept:**   
 Site 2 = core position with snp   
-Site 3 = accessory position with snp 
+Site 3 = accessory position with snp<br/>     
 **ref-remover removed:**   
 Site 1 = core position with snp (but not a snp when excluding the reference)   
 Site 4 = accessory position with no snp  
