@@ -4,6 +4,10 @@ This program is a multi-option tool that removes a specific entry (eg. 'Referenc
 # Author
 Andrew Buultjens
 
+# Dependencies
+* snp-sites
+* samtools
+
 # Examples
 
 **Original alignment containing reference sequence:**   
