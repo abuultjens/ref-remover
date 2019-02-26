@@ -23,7 +23,7 @@ Site 3 = accessory position with snp
 Site 4 = accessory position with no snp
 
 # Example 1: Removing the reference but keeping all original sites
-run ref-remover
+run ref-remover with 'original_aln_without_ref' option
 ```
 sh ref-remover.sh test_ref.fa Reference test_wo-ref original_aln_without_ref
 ```
@@ -39,7 +39,7 @@ AGNN
 ```
 
 # Example 2: Removing the reference and extracting core snps
-run ref-remover
+run ref-remover with 'core_snps_without_ref' option
 ```
 sh ref-remover.sh test_ref.fa Reference test_wo-ref core_snps_without_ref
 ```
@@ -60,7 +60,7 @@ inspect table output
 ```
 
 # Example 2: Removing the reference and extracting core and accessory snps
-run ref-remover
+run ref-remover with 'core_and_accessory_snps_without_ref' option
 ```
 sh ref-remover.sh test_ref.fa Reference test_wo-ref core_and_accessory_snps_without_ref
 ```
