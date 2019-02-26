@@ -65,11 +65,11 @@ inspect table output
 1	2	T	G	G
 ```  
 **ref-remover kept:**<br/>
-* Site 2 = core position with snp<br/>
+Site 2 = core position with snp<br/>
 **ref-remover removed:**<br/>
-* Site 1 = core position with snp (but not a snp when excluding the reference)   
-* Site 3 = accessory position with snp  
-* Site 4 = accessory position with no snp   
+Site 1 = core position with snp (but not a snp when excluding the reference)   
+Site 3 = accessory position with snp  
+Site 4 = accessory position with no snp   
 
 # Example 2: Removing the reference and extracting core and accessory snps
 run ref-remover with 'core_and_accessory_snps_without_ref' option
@@ -94,13 +94,11 @@ cat test_wo-ref.tab
 1	3	T	A	N
 ```   
 **ref-remover kept:**   
-
-* Site 2 = core position with snp   
-* Site 3 = accessory position with snp 
+Site 2 = core position with snp   
+Site 3 = accessory position with snp 
 **ref-remover removed:**   
-
-* Site 1 = core position with snp (but not a snp when excluding the reference)   
-* Site 4 = accessory position with no snp  
+Site 1 = core position with snp (but not a snp when excluding the reference)   
+Site 4 = accessory position with no snp  
 
 # Extracting accessory sites
 Take the original alignment with reference excluded (output from example 1) and use accessory-sites:   https://github.com/abuultjens/accessory-sites
