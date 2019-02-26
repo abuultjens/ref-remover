@@ -1,7 +1,8 @@
 # ref-remover
 This program removes a specific entry (eg. 'Reference') from a fasta file and outputs snp sites
 
-
+# Author
+Andrew Buultjens
 
 
 # Original alignment containing reference sequence
@@ -16,7 +17,7 @@ AGAA
 >TAXA_C
 AGNN
 ```
-**The alignment contains:**
+**The alignment contains:**   
 Site 1 = core position with snp (but not a snp when excluding the reference)   
 Site 2 = core position with snp  
 Site 3 = accessory position with snp  
