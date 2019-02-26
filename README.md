@@ -5,17 +5,61 @@ This program removes a specific entry (eg. 'Reference') from a fasta file and ou
 
 
 # Original alignment containing reference sequence
-![alt text](https://github.com/abuultjens/ref-remover/blob/master/ref_aln.png)
+```
+cat test_ref.fa
+>Reference
+TTTA
+>TAXA_A
+ATTA
+>TAXA_B
+AGAA
+>TAXA_C
+AGNN
+```
+the alignment contains:
+Site 1 = core position with snp (but not a snp when excluding the reference)
+Site 2 = core position with snp
+Site 3 = accessory position with snp
+Site 4 = accessory position with no snp
 
 # Example 1: Removing the reference but keeping all original sites
-![alt text](https://github.com/abuultjens/ref-remover/blob/master/just_remove_ref.png)
+run ref-remover
+```
+sh ref-remover.sh test_ref.fa Reference test_wo-ref original_aln_without_ref
+```
+inspect fasta output
+```
+cat test_wo-ref.aln
+>TAXA_A
+ATTA
+>TAXA_B
+AGAA
+>TAXA_C
+AGNN
+```
 
 # Example 2: Removing the reference and extracting core snps
-![alt text](https://github.com/abuultjens/ref-remover/blob/master/no_ref_core-snps.png)
+run ref-remover
+```
+sh ref-remover.sh test_ref.fa Reference test_wo-ref core_snps_without_ref
+```
+inspect fasta output
+```
+cat test_wo-ref.tab
+>TAXA_A
+T
+>TAXA_B
+G
+>TAXA_C
+G
+```
+inspect table output
+```
+#CHROM	POS	TAXA_A	TAXA_B	TAXA_C
+1	2	T	G	G
+```
 
 # Example 2: Removing the reference and extracting core and accessory snps
-
-
 run ref-remover
 ```
 sh ref-remover.sh test_ref.fa Reference test_wo-ref core_and_accessory_snps_without_ref
@@ -30,7 +74,6 @@ GA
 >TAXA_C
 GN
 ```
-
 inspect table output
 ```
 cat test_wo-ref.tab
