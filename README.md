@@ -101,5 +101,5 @@ Site 3 = accessory position with snp<br/>
 Site 1 = core position with snp (but not a snp when excluding the reference)   
 Site 4 = accessory position with no snp  
 
-# Extracting accessory sites
+# Extracting accessory sites without snps (invariant accessory sites)
 Take the original alignment with reference excluded (output from example 1) and use accessory-sites:   https://github.com/abuultjens/accessory-sites
