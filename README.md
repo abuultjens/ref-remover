@@ -64,13 +64,13 @@ inspect table output
 #CHROM	POS	TAXA_A	TAXA_B	TAXA_C
 1	2	T	G	G
 ```  
-**ref-remover kept:**<br/>  
-Site 2 = core position with snp<br/>  
+**ref-remover kept:**<br/>
+Site 2 = core position with snp<br/>
+**ref-remover removed:**<br/>
 <br/>
-**ref-remover removed:**<br/>    
-Site 1 = core position with snp (but not a snp when excluding the reference)<br/>   
-Site 3 = accessory position with snp<br/>  
-Site 4 = accessory position with no snp<br/>   
+Site 1 = core position with snp (but not a snp when excluding the reference)<br/>
+Site 3 = accessory position with snp<br/>
+Site 4 = accessory position with no snp<br/>
 
 # Example 2: Removing the reference and extracting core and accessory snps
 run ref-remover with 'core_and_accessory_snps_without_ref' option
