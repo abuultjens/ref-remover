@@ -16,7 +16,7 @@ AGAA
 >TAXA_C
 AGNN
 ```
-the alignment contains:   
+**The alignment contains:**
 Site 1 = core position with snp (but not a snp when excluding the reference)   
 Site 2 = core position with snp  
 Site 3 = accessory position with snp  
