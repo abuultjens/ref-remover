@@ -82,3 +82,6 @@ cat test_wo-ref.tab
 1	2	T	G	G
 1	3	T	A	N
 ```
+
+# Extracting accessory sites
+Take the original alignment with reference excluded (output from example 1) and use accessory-sites:   https://github.com/abuultjens/accessory-sites
