@@ -1,5 +1,5 @@
 # ref-remover
-This program is a multi-option tool that removes a specific entry (eg. 'Reference') from a multi fasta file
+This program is a multi-option tool that removes a specific entry (eg. 'Reference') from a multi fasta file and returns either all sites, core snps sites or core and accessory snp sites in table and fasta format.
 
 # Author
 Andrew Buultjens
