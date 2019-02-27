@@ -6,7 +6,7 @@ Andrew Buultjens
 
 # Usage
 ```
-sh ref-remover.sh [INFILE.fa] [ENTRY_TO_EXCLUDE] [PREFIX] [OUTFILE_DATA]
+% sh ref-remover.sh [INFILE.fa] [ENTRY_TO_EXCLUDE] [PREFIX] [OUTFILE_DATA]
 ```
 * note that the command options must be in the exact order as specified above as they are treated as positional arguments
 
@@ -16,7 +16,7 @@ sh ref-remover.sh [INFILE.fa] [ENTRY_TO_EXCLUDE] [PREFIX] [OUTFILE_DATA]
 
 # Help
 ```
-sh ref-remover.sh help
+% sh ref-remover.sh help
 ```
 
 # Dependencies
@@ -27,7 +27,7 @@ sh ref-remover.sh help
 
 **Original alignment containing reference sequence:**   
 ```
-cat test_ref.fa
+% cat test_ref.fa
 >Reference
 TTTA
 >TAXA_A
@@ -46,11 +46,11 @@ Site 4 = accessory position with no snp
 # Example 1: Removing the reference but keeping all original sites
 run ref-remover with 'original_aln_without_ref' option
 ```
-sh ref-remover.sh test_ref.fa Reference test_wo-ref original_aln_without_ref
+% sh ref-remover.sh test_ref.fa Reference test_wo-ref original_aln_without_ref
 ```
 inspect fasta output
 ```
-cat test_wo-ref.aln
+% cat test_wo-ref.aln
 >TAXA_A
 ATTA
 >TAXA_B
@@ -63,11 +63,11 @@ ref-remover excluded the reference fasta entry and kept all of the sites in the 
 # Example 2: Removing the reference and extracting core snps
 run ref-remover with 'core_snps_without_ref' option
 ```
-sh ref-remover.sh test_ref.fa Reference test_wo-ref core_snps_without_ref
+% sh ref-remover.sh test_ref.fa Reference test_wo-ref core_snps_without_ref
 ```
 inspect fasta output
 ```
-cat test_wo-ref.tab
+% cat test_wo-ref.aln
 >TAXA_A
 T
 >TAXA_B
@@ -77,6 +77,7 @@ G
 ```
 inspect table output
 ```
+% cat test_wo-ref.tab
 #CHROM	POS	TAXA_A	TAXA_B	TAXA_C
 1	2	T	G	G
 ```  
@@ -91,11 +92,11 @@ Site 4 = accessory position with no snp
 # Example 2: Removing the reference and extracting core and accessory snps
 run ref-remover with 'core_and_accessory_snps_without_ref' option
 ```
-sh ref-remover.sh test_ref.fa Reference test_wo-ref core_and_accessory_snps_without_ref
+% sh ref-remover.sh test_ref.fa Reference test_wo-ref core_and_accessory_snps_without_ref
 ```
 inspect fasta output
 ```
-cat test_wo-ref.aln
+% cat test_wo-ref.aln
 >TAXA_A
 TT
 >TAXA_B
@@ -105,7 +106,7 @@ GN
 ```
 inspect table output
 ```
-cat test_wo-ref.tab
+% cat test_wo-ref.tab
 #CHROM	POS	TAXA_A	TAXA_B	TAXA_C
 1	2	T	G	G
 1	3	T	A	N
