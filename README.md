@@ -58,6 +58,7 @@ AGAA
 >TAXA_C
 AGNN
 ```
+ref-remover excluded the reference fasta entry and kept all of the sites in the original file  
 
 # Example 2: Removing the reference and extracting core snps
 run ref-remover with 'core_snps_without_ref' option
