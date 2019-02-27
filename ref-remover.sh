@@ -99,18 +99,45 @@ fi
 
 # output just core snps without ref
 if [ "${OUTFILE_FORMAT}" == "core_snps_without_ref" ]; then
-    # fasta
+
+    # prepare fasta
     snp-sites -c ${RAND}_tmp_noref.fa > ${PREFIX}.aln
-    # table
-    snp-sites -c -v ${RAND}_tmp_noref.fa | vcf-to-tab | tr -d '/' | tr '*' 'N' | cut -f 1,2,4- > ${PREFIX}.tab
+    
+    # check if snps were found
+    WC=`wc -l ${PREFIX}.aln | awk '{print $1}'`
+    
+    # check if snps were found
+    if [ "$WC" == "0" ]; then
+    
+        # print error
+        echo "ERROR: could not find any snps"  
+        # crash script and exit
+        exit 1
+    else
+        # table
+        snp-sites -c -v ${RAND}_tmp_noref.fa | vcf-to-tab | tr -d '/' | tr '*' 'N' | cut -f 1,2,4- > ${PREFIX}.tab
+    fi
 fi
 
 # output both core and accessory snps without ref
 if [ "${OUTFILE_FORMAT}" == "core_and_accessory_snps_without_ref" ]; then
     # fasta
-    snp-sites ${RAND}_tmp_noref.fa > ${PREFIX}.aln
-    # table
-    snp-sites -v ${RAND}_tmp_noref.fa | vcf-to-tab | tr -d '/' | tr '*' 'N' | cut -f 1,2,4- > ${PREFIX}.tab
+    snp-sites ${RAND}_tmp_noref.fa > ${PREFIX}.aln   
+    
+    # check if snps were found
+    WC=`wc -l ${PREFIX}.aln | awk '{print $1}'`
+    
+    # check if snps were found
+    if [ "$WC" == "0" ]; then
+    
+        # print error
+        echo "ERROR: could not find any snps"  
+        # crash script and exit
+        exit 1
+    else
+        # table
+        snp-sites -v ${RAND}_tmp_noref.fa | vcf-to-tab | tr -d '/' | tr '*' 'N' | cut -f 1,2,4- > ${PREFIX}.tab
+    fi    
 fi
 
 #----------------------------------------
