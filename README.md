@@ -4,6 +4,21 @@ This program is a multi-option tool that removes a specific entry (eg. 'Referenc
 # Author
 Andrew Buultjens
 
+# Usage
+```
+sh ref-remover.sh [INFILE.fa] [ENTRY_TO_EXCLUDE] [PREFIX] [OUTFILE_DATA]
+```
+* note that the command options must be in the exact order as specified above as they are treated as positional arguments
+
+# Options
+* [ENTRY_TO_EXCLUDE] is the name of the fasta entry to exclude (eg. 'Reference')
+* [OUTFILE_DATA] can be 'original_aln_without_ref', 'core_snps_without_ref' or 'core_and_accessory_snps_without_ref'
+
+# Help
+```
+sh ref-remover.sh help
+```
+
 # Dependencies
 * snp-sites
 * samtools
