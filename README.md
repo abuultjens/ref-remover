@@ -20,8 +20,8 @@ sh ref-remover.sh help
 ```
 
 # Dependencies
-* snp-sites
-* samtools
+* snp-sites (tested with 2.4.1)  
+* samtools (tested with 1.3.1)  
 
 # Examples
 
