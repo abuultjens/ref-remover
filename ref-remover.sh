@@ -1,3 +1,4 @@
+#!/bin/bash
 
 #--------------------------------------------------------------------
 # ref-remover   Andrew Buultjens 2019: buultjensa@gmail.com
@@ -5,7 +6,7 @@
 
 INFILE=${1}
 #INFILE=test_ref.fa
-#INFILE=help
+#INFILE=ground_truth/6_sc4.3.6.full.clean.WO-_noref.aln
 
 # display help
 if [ "${INFILE}" == "help" ]; then
@@ -47,12 +48,25 @@ REMOVE=${2}
 #REMOVE=Reference
 
 PREFIX=${3}
-#PREFIX=OUT
+#PREFIX=6_sc4.3.6.full.clean.WO-_noref
 
 OUTFILE_FORMAT=${4}
 #OUTFILE_FORMAT=original_aln_without_ref
 #OUTFILE_FORMAT=core_snps_without_ref
 #OUTFILE_FORMAT=core_and_accessory_snps_without_ref
+
+#------------------------------------------------
+
+# check that infile exists
+if [ -e "${INFILE}" ] 
+then
+    echo ""
+else
+    # print error
+    echo "ERROR: cannot find ${INFILE}"  
+    # crash script and exit
+    exit 1
+fi
 
 #------------------------------------------------
 
