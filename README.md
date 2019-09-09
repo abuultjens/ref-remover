@@ -4,6 +4,10 @@ This program is a multi-option tool that removes a specific entry (eg. 'Referenc
 # Author
 Andrew Buultjens
 
+# Dependencies
+* samtools 
+* snp-sites
+
 # Usage
 ```
 % sh ref-remover.sh [INFILE.fa] [ENTRY_TO_EXCLUDE] [PREFIX] [OUTFILE_DATA]
